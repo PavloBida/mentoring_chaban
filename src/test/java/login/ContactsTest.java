@@ -7,11 +7,11 @@ import pageobject.ContactsPage;
 public class ContactsTest extends BaseTest {
 
     @Test
-    public void test123() {
+   public void test123() {
 
-        ContactsPage contactsPage = homePage.clickContactsButton();
+      ContactsPage contactsPage = homePage.clickContactsButton();
 
-        Assert.assertTrue(homePage.isLogoDisplayed(), "Logo is not displayed");
-    }
+       Assert.assertTrue(homePage.isLogoDisplayed(), "Logo is not displayed");
+  }
 
 }
