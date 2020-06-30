@@ -8,6 +8,7 @@
     <test name="Nopackage">
         <classes>
             <class name="login.MyTest"/>
+            <class name="login.ContactsTest"/>
         </classes>
     </test>
 

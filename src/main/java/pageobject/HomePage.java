@@ -20,7 +20,7 @@ public class HomePage {
     @FindBy(xpath = "//button[@class='btn-link-i js-rz-search-button']")
     private WebElement searchButton;
 
-    @FindBy(xpath = "//div[@class='header-topline']//a[@href='https://rozetka.com.ua/contacts/']")
+    @FindBy(xpath = "//div[@class='flex']//a[@href='https://rozetka.com.ua/contacts/']")
     private WebElement contactsButton;
 
     public HomePage(WebDriver driver) {

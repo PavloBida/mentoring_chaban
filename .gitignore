@@ -2,3 +2,5 @@
 target/*
 .idea/*
 /framework-mentorship.iml
+test-output/*
+allure-results/*
