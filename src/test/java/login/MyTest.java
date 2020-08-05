@@ -29,7 +29,7 @@ public class MyTest extends BaseTest {
         Reporter.log("Item's tile is clicked.", true);
 
         System.out.println(itemPage.getProductPriceValue());
-        Assert.assertEquals(itemPage.getProductPriceValue(), "19 999₴", "Price had changed!");
+        Assert.assertEquals(itemPage.getProductPriceValue(), "15 999₴", "Price had changed!");
         Reporter.log("Price is compared.", true);
     }
 

@@ -13,7 +13,7 @@ public class SearchPage {
 
     WebDriverWait wait;
 
-    @FindBy(xpath = "//li[1]//app-goods-tile-default[1]//div[1]//div[2]//a[2]")
+    @FindBy(xpath = "//a[@title='Мобильный телефон Samsung Galaxy S10 Lite 6/128GB Blue (SM-G770FZBGSEK) ']")
     private WebElement firstTile;
 
     public SearchPage(WebDriver driver) {

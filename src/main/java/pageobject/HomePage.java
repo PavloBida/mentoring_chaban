@@ -13,14 +13,14 @@ public class HomePage {
     @FindBy(xpath = "//img[@alt='Интернет-супермаркет ROZETKA']")
     private WebElement logo;
 
-    @FindBy(xpath = "//input[@placeholder='Поиск']")
+    @FindBy(xpath = "//input[@placeholder='Я ищу...']")
 
     private WebElement searchInput;
 
-    @FindBy(xpath = "//button[@class='btn-link-i js-rz-search-button']")
+    @FindBy(xpath = "//button[@class='button button_color_green button_size_medium search-form__submit']")
     private WebElement searchButton;
 
-    @FindBy(xpath = "//div[@class='flex']//a[@href='https://rozetka.com.ua/contacts/']")
+    @FindBy(xpath = "//li[@class='header-topline__links-item']//a[@href='https://rozetka.com.ua/contacts/']")
     private WebElement contactsButton;
 
     public HomePage(WebDriver driver) {
