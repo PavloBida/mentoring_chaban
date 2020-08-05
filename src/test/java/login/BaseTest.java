@@ -24,6 +24,7 @@ public class BaseTest {
     @Parameters("browser")
     public void setup(String browser) {
         driver = new WebDriverFactory(browser).getWebdriver();
+        driver.manage().window().maximize();
         driver.get(BASE_URL);
         homePage = PageFactory.initElements(driver, HomePage.class);
     }

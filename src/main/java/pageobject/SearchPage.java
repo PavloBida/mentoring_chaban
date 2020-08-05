@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -20,10 +19,23 @@ public class SearchPage {
         this.driver = driver;
         wait = new WebDriverWait(driver, 60);
     }
+    public void retryingFindClick() {
 
+        int attempts = 0;
+        while(attempts < 2) {
+            try {
+                firstTile.click();
+                break;
+            } catch(org.openqa.selenium.StaleElementReferenceException ignored) {
+            }
+            attempts++;
+        }
+    }
     public ItemPage clickFirstTile() {
-        wait.until(ExpectedConditions.elementToBeClickable(firstTile));
-        firstTile.click();
+          retryingFindClick();
+//        wait.until(ExpectedConditions.elementToBeClickable(firstTile));
+//        firstTile.click();
+
         return PageFactory.initElements(driver, ItemPage.class);
     }
 
